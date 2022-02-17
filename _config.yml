@@ -2,20 +2,20 @@ minimal_mistakes_skin: default
 locale: ko-KR
 title: 테스트중
 title_separator: '&#124;'
-subtitle: version 1.0
+# subtitle: version 1.0
 name: Sun-A Du
 description: 안녕세상!
-url: 'https://dusunax.github.io/git_blog'
+url: 'https://dusunax.github.io/'
 repository: dusunax/dusunax.github.com
-teaser: null
-logo: null
+teaser: true
+logo: assets/img/profile/unicon.png
 masthead_title: 개발 블로그 겸 포트폴리오
 breadcrumbs: true
 words_per_minute: 200
 
 author:
   name: Sun-A Du
-  avatar: img/profile/202112.jpg
+  avatar: assets/img/profile/202112.jpg
   bio: 공부하는 사람
   location: Seoul, Republic of Korea
   links:
@@ -72,7 +72,10 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: |+
-
+comments:
+  provider: 'disqus'
+  disqus:
+    shortname: 'fristGitblog'
 
 incremental: false
 kramdown:
