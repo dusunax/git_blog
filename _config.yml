@@ -1,17 +1,28 @@
 minimal_mistakes_skin: default
 locale: ko-KR
-title: 테스트중
+title: 개발 블로그 겸 포트폴리오 사이트
 title_separator: '&#124;'
 # subtitle: version 1.0
 name: Sun-A Du
 description: 안녕세상!
-url: 'https://dusunax.github.io/'
+url: 'https://dusunax.github.io'
+baseurl: ""
 repository: dusunax/dusunax.github.com
 teaser: true
 logo: assets/img/profile/unicon.png
-masthead_title: 개발 블로그 겸 포트폴리오
+masthead_title: 개발 블로그 겸 포트폴리오 사이트
 breadcrumbs: true
 words_per_minute: 200
+    
+comments:
+  provider: 'disqus'
+  disqus:
+    shortname: 'fristGitblog'
+
+search                   : #true
+search_full_content      : #true
+google_site_verification :
+naver_site_verification  :
 
 author:
   name: Sun-A Du
@@ -72,11 +83,6 @@ markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: |+
-comments:
-  provider: 'disqus'
-  disqus:
-    shortname: 'fristGitblog'
-
 incremental: false
 kramdown:
   input: GFM
@@ -93,7 +99,7 @@ sass:
 permalink: '/:categories/:title/'
 paginate: 5
 paginate_path: '/page:num/'
-timezone: null
+timezone: Asia/Seoul
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -118,21 +124,21 @@ compress_html:
     envs: development
 
 defaults:
+  # _posts
   - scope:
       path: ''
       type: posts
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: false
       related: false
+  # _pages
   - scope:
       path: _pages
       type: pages
     values:
       layout: single
       author_profile: true
-      share: false
-      

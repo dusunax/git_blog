@@ -1,31 +1,129 @@
-// 본문
-.archive__subtitle {
+// Nav
+a[href="/git_blog/search/"],
+a[href="/git_blog/search/"]::before
+{
+    position: relative;
+    color: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
     margin: 0;
 }
-.page__meta {
-    text-align: right;
-    font-size: 0.6em;
-    .page__taxonomy-item {
-        margin-right: 0;
-    }
+a[href="/git_blog/search/"]::after {
+    width: 25px;
+    height: 25px;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: url(/git_blog/assets/img/postIcon/loupe.png) center / cover;
+    opacity: 0.8;
+    transition: opacity 0.2s;
 }
-.page {
-    padding-right: 0;
+a[href="/search/"]:hover::after {
+    opacity: 1;
 }
+.imgBox {
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    gap: 20px;
+}
+.imgBox img {
+    width: 100%;
+}
+.imgBox > * {
+    width: calc(50% - 10px);
+    flex: 1 1 calc(50% - 10px);
+}
+.imgBox > *:first-child {
+    flex: 1 1 100%;
+}
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    border: none;
+}
+// 본문
 .archive {
-    padding-left: 20px;
+    padding: 0 0 0 20px;
+    font-size: 16px;
+}
+.iconEmoji {
+    display: inline-block;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 20px; 
+    font-size: 20px;
+    text-align: center;
+    background-color: #aaa;
+}
+.taxonomy__index {
+    margin-top: 8px;
+}
+.page__hero--overlay {
+    margin-bottom: 5px;
 }
 .breadcrumbs {
     text-align: right;
-    padding-right: 42px;
     ol {
         font-size: small;
     }
 }
+.page__meta {
+    text-align: right;
+    font-size: 0.7em;
+    .page__taxonomy-item {
+        margin-right: 0;
+    }
+    .page__meta-readtime {
+        opacity: 0;
+    }
+}
+.page {
+    padding-right: 0;
+    .page__content p {
+        font-size: 16px;
+    }
+    .pagination {
+        margin-top: 16px;
+        padding-top: 0;
+        border-top: 0;
+        text-align: center;
+        display: flex;
+        justify-content: space-between;
+        ul {
+            display: inline-block;
+        }
+        a {
+            width: auto;
+            font-size: 11px;
+            border-radius: 6px;
+        }
+    }
+    .pagination::after {
+        position: absolute;
+    }
+    .pagination--pager.disabled {
+        opacity: 0.4;
+    }
+}
+@media (min-width: 1030px){
+    .page {
+        padding: 0 20px;
+        line-height: 1.5
+    }
+}
 .sidebar {
     background-color: #fafafa;
-    box-shadow: 2px 2px 2px #ddd;
+    box-shadow: 2px 2px 2px #ccc;
     margin-bottom: 8px;
+    margin-top: 27px;
     >* {
         padding: 1em;
         margin: 0;
@@ -69,6 +167,9 @@
     }
 }
 @media (max-width: 1040px) {
+    .sidebar {
+        margin: 10px 0;
+    }
     .breadcrumbs {
         padding-right: 1.55em;
     }
@@ -76,6 +177,12 @@
         .h-card {
             flex-direction: row;
         }
+    }
+    .archive {
+        padding: 0 5px;
+    }
+    #main {
+        padding: 0 20px;
     }
 }
 @media (max-width: 600px) {
