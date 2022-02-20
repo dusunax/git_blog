@@ -1,6 +1,6 @@
 // Nav
-a[href="/git_blog/search/"],
-a[href="/git_blog/search/"]::before
+a[href="/search/"],
+a[href="/search/"]::before
 {
     position: relative;
     color: transparent !important;
@@ -8,7 +8,7 @@ a[href="/git_blog/search/"]::before
     border: none !important;
     margin: 0;
 }
-a[href="/git_blog/search/"]::after {
+a[href="/search/"]::after {
     width: 25px;
     height: 25px;
     content: '';
@@ -17,7 +17,7 @@ a[href="/git_blog/search/"]::after {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: url(/git_blog/assets/img/postIcon/loupe.png) center / cover;
+    background: url(/assets/img/postIcon/loupe.png) center / cover;
     opacity: 0.8;
     transition: opacity 0.2s;
 }
@@ -43,7 +43,7 @@ a[href="/search/"]:hover::after {
 .imgBox > *:first-child {
     flex: 1 1 100%;
 }
-h1, h2, h3, h4, h5 {
+h2, h3, h4, h5 {
     margin: 0;
     padding: 0;
     line-height: 1.5;
@@ -176,6 +176,7 @@ h1, h2, h3, h4, h5 {
     .sidebar {
         .h-card {
             flex-direction: row;
+            text-align: left;
         }
     }
     .archive {
@@ -190,6 +191,7 @@ h1, h2, h3, h4, h5 {
         .h-card {
             flex-direction: column;
             justify-content: space-between;
+            text-align: center;
         }
         .author__avatar {
             width: 30vw;
