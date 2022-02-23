@@ -5,8 +5,8 @@ title_separator: '&#124;'
 # subtitle: version 1.0
 name: Sun-A Du
 description: 안녕세상!
-url: 'https://dusunax.github.io'
-baseurl: "/git_blog"
+url: https://dusunax.github.io
+baseurl: /git_blog
 repository: dusunax/dusunax.github.com
 teaser: true
 logo: assets/img/profile/unicon.png
